@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y $PACKAGES
 # Allow SSH Root Login
 RUN sed -i 's|^#PermitRootLogin.*|PermitRootLogin yes|g' /etc/ssh/sshd_config
 # Configure root password
-RUN echo "root:root123" | chpasswd
+RUN echo "root:mypass" | chpasswd
